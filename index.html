@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <link href="css/jquery.fullPage.css" rel="stylesheet">
+    <script src="js/jquery.fullPage.js"></script>
+    <script src="js/background.js"></script>
+    <link href="css/reset.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a id="Sec_Home" href="#">Home</a>
+        <a id="Sec_Skill" href="#">Skill</a>
+        <a id="Sec_Project" href="#">Project</a>
+        <a id="Sec_Career" href="#">Career</a>
+        <a id="Sec_Connect" href="#">Connect</a>
+    </div>
+    <div id="ham">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+    </div>
+
+    <main id="fullpage">
+        <section class="section A_sec1" data-anchor="home">
+            <h1>Home</h1>
+        </section>
+        <section class="section A_sec2" data-anchor="skill">
+            <h1>SKILL</h1>
+            <canvas id="canvas" height="100%"></canvas>
+        </section>
+        <section class="section A_sec3" data-anchor="project">
+            <h1>Project</h1>
+        </section>
+        <section class="section A_sec4" data-anchor="career">
+            <h1>Career</h1>
+            <article>
+                <aside class="career_L">
+                    <div>
+                        <div class="company">
+                            <span class="dot"></span>
+                            <h4>CNU Global</h4>
+                            <h5>(2020.04 ~ 2021.07)</h5>
+                        </div>
+                        <div class="desc">
+                            <p>- F/W 개발(Silergy 계열) : 전력량계 계기</p>
+                            <p>- S/W 개발(C#) : 전력량계 통합운영 검침 프로그램</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="company">
+                            <span class="dot"></span>
+                            <h4>엑스랩</h4>
+                            <h5>(2019.07 ~ 2020.04)</h5>
+                        </div>
+                        <div class="desc">
+                            <p>- F/W 개발(Nordic IC)   : 콘서트장 응원봉 개발 </p>
+                            <p>- S/W 개발(C++ Builder) : 테스트 프로그램 개발 </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="company">
+                            <span class="dot"></span>
+                            <h4>세니온</h4>
+                            <h5>(2017.01 ~ 2019.01)</h5>
+                        </div>
+                        <div class="desc">
+                            <p>- S/W 개발(HMI, PC S/W) </p>
+                            <div class="part">
+                                <p>  PC S/W : C++ Builder</p>
+                                <p>  HMI : Qt(Ubuntu 16.04)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="company">
+                            <span class="dot"></span>
+                            <h4>휴먼인텍</h4>
+                            <h5>(2014.06 ~ 2016.02)</h5>
+                        </div>
+                        <div class="desc">
+                            <p>- F/W 개발 (STM32F 계열) : 침투신호처리기</p>
+                            <div class="part">
+                                <p>: 스마트 홈 네트워크(Zigbee)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="company">
+                            <span class="dot"></span>
+                            <h4>디라직</h4>
+                            <h5>(2012.12 ~ 2014.06)</h5>
+                        </div>
+                        <div class="desc">
+                            <p>- F/W 개발 (ATmega 계열)</p>
+                        </div>
+                    </div>
+                </aside>
+                <aside class="career_R">
+                    <div><img src="./img/team_project.png" alt=""></div>
+                    <div><img src="" alt=""></div>
+                    <div><img src="" alt=""></div>
+                    <div><img src="" alt=""></div>
+                    <div><img src="" alt=""></div>
+                </aside>
+            </article>
+        </section>
+        <section class="section A_sec5" data-anchor="connect">
+            <h1>Connect</h1>
+        </section>
+    </main>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        var color = Chart.helpers.color;
+        var config = {
+            type: 'radar',
+            data: {
+                labels: ["HTML", "CSS", "JavaScript", "nodeJs", "PHP", "C", "C++", "C#"],
+                datasets: [{
+                    label: 'codewj skill',
+                    backgroundColor: color(window.chartColors.red).alpha(0.2).rgbString(),
+                    borderColor: window.chartColors.white,
+                    pointBackgroundColor: window.chartColors.white,
+                    data: [100, 90, 80, 70, 80, 90, 90, 90]
+                }]
+            },
+            options: {
+                legend: {
+                    position: 'bottom',
+                },
+                scale: {
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        window.onload = function () {
+            window.myRadar = new Chart(document.getElementById('canvas'), config);
+        };
+
+    </script>
+</body>
+
+</html>

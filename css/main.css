@@ -1,0 +1,194 @@
+/******************************************************************************************************/
+h1 {
+  font-size: 5rem;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.875;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+h2 {
+  font-size: 3rem;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.875;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+#ham {
+  z-index: 9;
+  transition: margin-left 0.5s;
+  padding: 16px;
+  position: fixed;
+  top: 10px;
+  left: 30px;
+  color: #333;
+}
+
+.sidenav {
+  width: 0;
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a :hover {
+  color: #f40009;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+section {
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  top: 40px;
+  background-position: center center;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.Slide_Color_Change > p {
+  line-height: 40px;
+}
+
+#SlideBtn {
+  display: none;
+}
+
+label {
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  background: #f1f1f1;
+  display: inline-block;
+  text-indent: -9999em;
+  position: relative;
+  transition: 0.3s;
+}
+label :after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #333;
+  border-radius: 50%;
+  left: 5px;
+  top: 5px;
+  transition: 0.3s;
+}
+
+#SlideBtn:checked + label {
+  background: #333;
+}
+#SlideBtn:checked + label :after {
+  left: 45px;
+  background: #f1f1f1;
+}
+
+#canvas {
+  margin-top: 2%;
+}
+
+/********************************************************************************************/
+/********************************************************************************************/
+.A_sec4 h1 {
+  padding-bottom: 5%;
+}
+.A_sec4 article {
+  display: flex;
+}
+.A_sec4 article .career_L {
+  flex: 1;
+  text-align: left;
+  padding-left: 5%;
+  padding-bottom: 3%;
+}
+.A_sec4 article .career_L .company {
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  padding-bottom: 1%;
+}
+.A_sec4 article .career_L .company .dot {
+  display: block;
+  background-color: #333;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.A_sec4 article .career_L .company h4 {
+  padding-left: 3%;
+  font-size: 1.5rem;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.875;
+  text-transform: uppercase;
+  cursor: default;
+}
+.A_sec4 article .career_L .company h5 {
+  padding-left: 3%;
+  font-size: 1rem;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.875;
+  text-transform: uppercase;
+  cursor: default;
+}
+.A_sec4 article .career_L .desc {
+  padding-left: 10%;
+  padding-bottom: 3%;
+}
+.A_sec4 article .career_L .part {
+  padding-left: 5%;
+}
+.A_sec4 article .career_R {
+  flex: 1;
+}
+.A_sec4 article .career_R div img {
+  width: 50%;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

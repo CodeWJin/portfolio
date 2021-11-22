@@ -1,0 +1,30 @@
+$font_default_family : "Open Sans", "Arial", sans-serif;
+$font_default_size : 16px; // 16 18 24 60 80
+
+$fs_16 : 1rem;    // 16
+$fs_18 : 1.1rem;    // 18
+$fs_24 : 1.5rem;    // 24
+$fs_48 : 3rem;    // 48
+$fs_60 : 3.75rem;    // 60
+$fs_80 : 5rem;    // 80
+
+$c_white : #f0f0f0;
+$c_black : #1E1E1E;
+$c_red : #f40009;
+$c_sprite : #006633;
+
+$c_cream : #f1f1f1;
+$c_DarkBlack : #333;
+
+@mixin common_Box_sizing {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin media_MaxWidth($width) { @media (max-width: $width) { @content; } }
+@mixin moveforever { @keyframes move-forever { @content; }
+}
+
+
+/******************************************************************************************************/
