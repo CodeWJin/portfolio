@@ -17,6 +17,9 @@ $f_Size_h2_3 : 1rem;
     cursor: default;
 }
 h1{
+    position: absolute;
+    top: 10%;
+    left: 10%;
     font-size: $f_Size_h1_1;
     @include font_type_default();
 }
@@ -113,17 +116,15 @@ label {
 // career
 /********************************************************************************************/
 .A_sec4{
-    h1{
-        padding-bottom: 5%;
-    }
     article{
         display: flex;
+        position: absolute;
+        top: 20%;
         .career_L{
             flex: 1;
             text-align: left;
             padding-left: 5%;
-            padding-bottom: 3%;
-    
+            width: 100vw;
             .company{
                 display: flex;
                 align-items: center;
@@ -151,15 +152,7 @@ label {
                 padding-bottom: 3%;
             }
             .part{
-                padding-left: 5%;
-            }
-        }
-        .career_R{
-            flex: 1;
-            div{
-                img{
-                    width: 50%;
-                }
+                padding-left: 3%;
             }
         }
     }
@@ -170,6 +163,17 @@ label {
     }
     h2{
         font-size: $f_Size_h2_2;
+    }
+    .A_sec4 article .career_L .company{
+        h4{
+            font-size:0.6rem;
+        }
+        h5{
+            font-size:0.6rem;
+        }
+    }
+    p{
+        font-size:0.6rem;
     }
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}

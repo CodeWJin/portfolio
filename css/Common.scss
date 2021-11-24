@@ -23,6 +23,7 @@ $c_DarkBlack : #333;
 }
 
 @mixin media_MaxWidth($width) { @media (max-width: $width) { @content; } }
+@mixin media_MinWidth($width) { @media (min-width: $width) { @content; } }
 @mixin moveforever { @keyframes move-forever { @content; }
 }
 
