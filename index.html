@@ -6,28 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="css/reset.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>codewj`s portfolio</title>
+
+    <!--ChartJS-->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/utils.js"></script>
     <script src="js/Chart.min.js"></script>
+
+    <!--Text Hover-->
+    <link rel="stylesheet" href="css/test_hover_text.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+
+    <!--Fullpage-->
     <link href="css/jquery.fullPage.css" rel="stylesheet">
     <script src="js/jquery.fullPage.js"></script>
     <script src="js/background.js"></script>
-    <link href="css/reset.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/main.css">
+
+    <!--Project-->
+    <link rel="stylesheet" href="css/project.css">
+    <script src="js/project.js"></script>
 </head>
 
 <body>
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a id="Sec_Home" href="#">Home</a>
-        <a id="Sec_Skill" href="#">Skill</a>
-        <a id="Sec_Project" href="#">Project</a>
-        <a id="Sec_Career" href="#">Career</a>
-        <a id="Sec_Connect" href="#">Connect</a>
+        <a id="Sec_Home" href="#" onclick="closeNav()">Home</a>
+        <a id="Sec_Skill" href="#" onclick="closeNav()">Skill</a>
+        <a id="Sec_Project" href="#" onclick="closeNav()">Project</a>
+        <a id="Sec_Career" href="#" onclick="closeNav()">Career</a>
+        <a id="Sec_Connect" href="#" onclick="closeNav()">Connect</a>
     </div>
     <div id="ham">
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
@@ -35,17 +49,115 @@
 
     <main id="fullpage">
         <section class="section A_sec1" data-anchor="home">
-            <h1>Home</h1>
+            <h1 class="pageTitle">Home</h1>
+            <article class="HomeArticle">
+                <h1 id="heading">
+                    <div class="fills">
+                        <div class="sec1_Text">
+                            <span class="fill fill1">안녕하세요</span>
+                        </div>
+                        <div class="sec1_Text">
+                            <span class="fill fill2">머물기보다 쉼없이 도전하는</span>
+                        </div>
+                        <div class="sec1_Text">
+                            <span class="fill fill3">박우진(codewj) 입니다.</span>
+                        </div>
+                    </div>
+                    <div class="masks">
+                        <div class="sec1_Text">
+                            <span class="mask mask1">안녕하세요</span>
+                        </div>
+                        <div class="sec1_Text">
+                            <span class="mask mask2">머물기보다 쉼없이 도전하는</span>
+                        </div>
+                        <div class="sec1_Text">
+                            <span class="mask mask3">박우진(codewj) 입니다.</span>
+                        </div>
+                    </div>
+                </h1>
+            </article>
         </section>
         <section class="section A_sec2" data-anchor="skill">
-            <h1>SKILL</h1>
+            <h1 class="pageTitle">SKILL</h1>
             <canvas id="canvas" height="100%"></canvas>
+            <img id="canvas_img" src="/img/skill.png">
         </section>
         <section class="section A_sec3" data-anchor="project">
-            <h1>Project</h1>
+            <h1 class="pageTitle">Project</h1>
+            <article>
+                <div class='walkthrough show reveal'>
+                    <div class='walkthrough-pagination'>
+                        <a class='dot active'></a>
+                        <a class='dot'></a>
+                        <a class='dot'></a>
+                        <a class='dot'></a>
+                        <a class='dot'></a>
+                    </div>
+                    <div class='walkthrough-body'>
+                        <button class='prev-screen'>
+                            <i class='icon-angle-left'></i>
+                        </button>
+                        <ul class='screens animate'>
+                            <li class='screen active'>
+                                <div class='media icons'>
+                                </div>
+                                <h3>
+                                    Product Intro
+                                    <br>Walkthrough</br>
+                                </h3>
+                                <p>Logos</p>
+                            </li>
+                            <li class='screen'>
+                                <div class='media books'>
+                                </div>
+                                <h3>
+                                    Data and File
+                                    <br>Management</br>
+                                </h3>
+                                <p>Books</p>
+                            </li>
+                            <li class='screen'>
+                                <div class='media bars'>
+                                </div>
+                                <h3>
+                                    Analytics
+                                    <br>and Metrics</br>
+                                </h3>
+                                <p>Bars</p>
+                            </li>
+                            <li class='screen'>
+                                <div class='media files'>
+                                </div>
+                                <h3>
+                                    Reporting
+                                    <br>and Insights</br>
+                                </h3>
+                                <p>Files</p>
+                            </li>
+                            <li class='screen'>
+                                <div class='media comm'>
+                                </div>
+                                <h3>
+                                    Communications
+                                    <br>Tools</br>
+                                </h3>
+                                <p>Communications</p>
+                            </li>
+                        </ul>
+                        <button class='next-screen'>
+                            <i class='icon-angle-right'></i>
+                        </button>
+                    </div>
+                    <div class='walkthrough-footer'>
+                        <button class='button next-screen'>Next</button>
+                        <!-- <button class='button finish close' disabled='true'>Finish</button> -->
+                    </div>
+                </div>
+            </article>
+
         </section>
         <section class="section A_sec4" data-anchor="career">
-            <h1>Career</h1>
+            <h1 class="pageTitle">Career</h1>
             <article>
                 <aside class="career_L">
                     <div>
@@ -66,7 +178,7 @@
                             <h5>(2019.07 ~ 2020.04)</h5>
                         </div>
                         <div class="desc">
-                            <p>- F/W 개발(Nordic IC)   : 콘서트장 응원봉 개발 </p>
+                            <p>- F/W 개발(Nordic IC) : 콘서트장 응원봉 개발 </p>
                             <p>- S/W 개발(C++ Builder) : 테스트 프로그램 개발 </p>
                         </div>
                     </div>
@@ -79,8 +191,8 @@
                         <div class="desc">
                             <p>- S/W 개발(HMI, PC S/W) </p>
                             <div class="part">
-                                <p>  PC S/W : C++ Builder</p>
-                                <p>  HMI : Qt(Ubuntu 16.04)</p>
+                                <p> PC S/W : C++ Builder</p>
+                                <p> HMI : Qt(Ubuntu 16.04)</p>
                             </div>
                         </div>
                     </div>
@@ -91,9 +203,10 @@
                             <h5>(2014.06 ~ 2016.02)</h5>
                         </div>
                         <div class="desc">
-                            <p>- F/W 개발 (STM32F 계열) : 침투신호처리기</p>
+                            <p>- F/W 개발 (STM32F 계열)</p>
                             <div class="part">
                                 <p>: 스마트 홈 네트워크(Zigbee)</p>
+                                <p>: 침투신호처리기</p>
                             </div>
                         </div>
                     </div>
@@ -111,7 +224,7 @@
             </article>
         </section>
         <section class="section A_sec5" data-anchor="connect">
-            <h1>Connect</h1>
+            <h1 class="pageTitle">Connect</h1>
         </section>
     </main>
     <script>
@@ -129,7 +242,7 @@
                 labels: ["HTML", "CSS", "JavaScript", "nodeJs", "PHP", "C", "C++", "C#"],
                 datasets: [{
                     label: "codewj`s skill",
-                    backgroundColor: color(window.chartColors.red).alpha(0.2).rgbString(),
+                    backgroundColor: color(window.chartColors.blue).alpha(0.2).rgbString(),
                     borderColor: window.chartColors.white,
                     pointBackgroundColor: window.chartColors.white,
                     data: [100, 90, 80, 70, 80, 90, 90, 90]
@@ -152,6 +265,7 @@
         };
 
     </script>
+    <script src="js/test_hover_text.js"></script>
 </body>
 
 </html>

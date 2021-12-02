@@ -1,13 +1,5 @@
 @import "Common.scss";
 
-$f_Size_h1_1 : 5rem;
-$f_Size_h1_2 : 3rem;
-$f_Size_h1_3 : 3rem;
-
-$f_Size_h2_1 : 3rem;
-$f_Size_h2_2 : 2rem;
-$f_Size_h2_3 : 1rem;
-
 @mixin font_type_default {
     font-family: "Open Sans", "Arial", sans-serif;
     font-weight: 800;
@@ -16,17 +8,24 @@ $f_Size_h2_3 : 1rem;
     text-transform: uppercase;
     cursor: default;
 }
-h1{
+.pageTitle{
     position: absolute;
     top: 10%;
     left: 10%;
-    font-size: $f_Size_h1_1;
+    font-size: $fs_48;
     @include font_type_default();
 }
-h2{
-    font-size: $f_Size_h2_1;
-    @include font_type_default();
-}
+#mySidenav a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 0;
+    height: 1vw;
+    background: #5d8cef;
+    left: 50%;
+  }
 
 #ham{
     z-index: 9;
@@ -112,6 +111,9 @@ label {
 #canvas{
     margin-top: 2%;
 }
+#canvas_img{
+    display: none;
+}
 /********************************************************************************************/
 // career
 /********************************************************************************************/
@@ -157,12 +159,18 @@ label {
         }
     }
 }
-@include media_MaxWidth(500px){
-    h1{
-        font-size: $f_Size_h1_2;
+@include media_MaxWidth(700px){
+    #canvas{
+        display: none;
     }
-    h2{
-        font-size: $f_Size_h2_2;
+    #canvas_img{
+        display: block;
+        width: 100vw;
+    }
+}
+@include media_MaxWidth(500px){
+    .pageTitle{
+        font-size: $f_Size_h1_2;
     }
     .A_sec4 article .career_L .company{
         h4{
@@ -177,5 +185,4 @@ label {
     }
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-    
 }

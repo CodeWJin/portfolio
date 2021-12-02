@@ -5,7 +5,8 @@ $(function () {
     scrollHorizontally: true,
     navigation: true,
     navigationPosition: "right",
-    anchors:['home','skill','project','career','connect'],
+    anchors: ["home", "skill", "project", "career", "connect"],
+    // easingcss3: "cubic-bezier(0.175, 0.885, 0.320, 1.275)",
   });
   $("#Sec_Home").click(function () {
     $.fn.fullpage.moveTo(1);

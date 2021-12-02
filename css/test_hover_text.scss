@@ -1,0 +1,183 @@
+@import "Common.scss";
+
+article {
+  text-align: center;
+  
+  #heading {
+    position: relative;
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    line-height: 0.875;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    cursor: default;
+    top:auto;
+    left: 0;
+
+    .fills {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .sec1_Text{
+        padding-bottom: 5%;
+      }
+      .sec1_Text:last-child{
+        padding-bottom: 0;
+      }
+      .fill {
+        &.fill1{
+          color: #E0E0E0;
+          font-size: $fs_160;
+          font-weight: 800;
+          letter-spacing: -0.04em;
+          // margin-bottom: 10%;
+        }
+        &.fill2 {
+          color: rgb(119,170,193);
+          font-size: $fs_80;
+          // margin-bottom: 10%;
+          font-weight: 800;
+          letter-spacing: 0.04rem;
+        }
+        &.fill3{
+          color: #E0E0E0;
+          font-size: $fs_80;
+          // margin-bottom: 10%;
+          font-weight: 800;
+          letter-spacing: 0.04rem;
+        }
+      }
+    }
+    .masks {
+      clip-path: circle(800px at var(--clip-position));
+      -webkit-mask-image: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 66%);
+      -webkit-mask-size: 800px 800px;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: var(--mask-position);
+      display: flex;
+      flex-direction: column;
+      .sec1_Text{
+        padding-bottom: 5%;
+      }
+      .sec1_Text:last-child{
+        padding-bottom: 0;
+      }
+      .mask {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+  
+        &.mask1 {
+          background-image: url(../img/sky.jpeg);
+          font-size: $fs_160;
+          font-weight: 800;
+          letter-spacing: -0.04em;
+        }
+        &.mask2 {
+          background-image: url(../img/mountin.jpeg);
+          font-size: $fs_80;
+          font-weight: 800;
+          letter-spacing: 0.04rem;
+        }
+        &.mask3 {
+          background-image: url(../img/fire_2.jpeg);
+          font-size: $fs_80;
+          font-weight: 800;
+          letter-spacing: 0.04rem;
+        }
+      }
+    }
+  }
+}
+@include media_MaxWidth(1401px){
+  article{
+    #heading {
+      // width: 79rem;
+      .fills{
+        .fill{
+          &.fill1{
+            font-size: $fs_80;
+          }
+          &.fill2,
+          &.fill3{
+            font-size: $fs_60;
+          }
+        }
+      }
+      .masks{
+        .mask{
+          &.mask1{
+            font-size: $fs_80;
+          }
+          &.mask2,
+          &.mask3 {
+            font-size: $fs_60;
+          }
+        }
+      }      
+    }
+  }
+}
+@include media_MaxWidth(1000px){
+  article{
+    #heading {
+      // width: 79rem;
+      
+      .fills{
+        .fill{
+          &.fill1{
+            font-size: $fs_60;
+          }
+          &.fill2,
+          &.fill3{
+            font-size: $fs_48;
+          }
+        }
+      }
+      .masks{
+        .mask{
+          &.mask1{
+            font-size: $fs_60;
+          }
+          &.mask2,
+          &.mask3 {
+            font-size: $fs_48;
+          }
+        }
+      }
+    }
+  }
+}
+@include media_MaxWidth(700px){
+  article{
+    #heading {
+      .fills{
+        .fill{
+          &.fill1{
+            font-size: $fs_48;
+          }
+          &.fill2,
+          &.fill3{
+            font-size: $fs_24;
+          }
+        }
+      }
+      .masks{
+        .mask{
+          &.mask1{
+            font-size: $fs_48;
+          }
+          &.mask2,
+          &.mask3 {
+            font-size: $fs_24;
+          }
+        }
+      }
+    }
+  }
+}
