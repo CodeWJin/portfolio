@@ -44,13 +44,13 @@
       indexMax: function () {
         return $(".screen").length - 1;
       },
-      openModal: function () {
-        $(".walkthrough, .shade").addClass("show");
-        setTimeout(() => {
-          return $(".walkthrough, .shade").addClass("reveal");
-        }, 200);
-        return this.updateScreen();
-      },
+      // openModal: function () {
+      //   $(".walkthrough").addClass("show");
+      //   setTimeout(() => {
+      //     return $(".walkthrough").addClass("reveal");
+      //   }, 200);
+      //   return this.updateScreen();
+      // },
     };
     $(".next-screen").click(function () {
       return walkthrough.nextScreen();
@@ -58,10 +58,10 @@
     $(".prev-screen").click(function () {
       return walkthrough.prevScreen();
     });
-    $(".open-walkthrough").click(function () {
-      return walkthrough.openModal();
-    });
-    walkthrough.openModal();
+    // $(".open-walkthrough").click(function () {
+    //   return walkthrough.openModal();
+    // });
+    // walkthrough.openModal();
 
     // Optionally use arrow keys to navigate walkthrough
     return $(document).keydown(function (e) {
